@@ -10,6 +10,7 @@ def increase_quality(item)
   item.quality += 1 if item.quality < 50
 end
 def decrease_quality(item)
+  item.quality -= 1 if item.name == 'Conjured Mana Cake'
   item.quality -= 1 if item.quality > 0 && item.name !='Sulfuras, Hand of Ragnaros' && item.name != 'Backstage passes to a TAFKAL80ETC concert'
   item.quality = 0 if item.name == 'Backstage passes to a TAFKAL80ETC concert' && item.sell_in < 0
 end
